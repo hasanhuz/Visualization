@@ -72,8 +72,6 @@ def ploting(df):
     plt.figure(figsize=(15, 7))
     fig = sns.pointplot(x='train_size', y='f1-score', hue='Model',
                         data=df)
-    #markers=["o", "x","s","v"], linestyles=["-", "--","-.","-"]
-    #sns.set_context("notebook", font_scale=1.5)
     fig.set(ylabel="F-score")
     fig.set(xlabel="#training examples")
     fig.set(title="Assesing various training sizes")
