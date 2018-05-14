@@ -44,11 +44,10 @@ def loadingData(filename):
     print('...Extracting tweets and labels as np.array...')
     # Convert tweets and labels to python lists
     df['label'] = df.apply(lambda row: row['label'].upper().strip(), axis=1)
-    emo_label_map = {"ANGER": 0, "DISGUST": 1, "FEAR": 2, "JOY": 3, "SAD": 4, "SURPRISE": 5}
     df['label'] = df['label'].map(emo_label_map)
     list_tweets = np.array(df['tweet'])
     len(list_tweets)
     labels = np.array(df['label'])
     len(labels)
     print('...Done...')
-    return list_tweets[:10000], labels[:10000]
+    return list_tweets, labels
