@@ -26,7 +26,6 @@ def LSTM_model(vocab_size):
     word.add(LSTM(LSTM_DIM))
     word.add(Dense(6))
     word.add(Activation('softmax'))
-    # try using different optimizers and different optimizer configs
     word.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
     word.summary()
     return word
