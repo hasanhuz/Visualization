@@ -10,7 +10,7 @@ email= 'halhuzali@gmail.com'
 
 ########################
 #usage: run using command line
-    #python model_confg.py train_file.csv test_file.csv picture_name
+    #python main.py train_file.csv test_file.csv picture_name
 #######################
 #ToDo: loading data
 X_train, y_train = loadingData(argv[1])
